@@ -25,7 +25,7 @@ document.getElementById('payment-form').addEventListener('submit', async functio
     'x-client-secret': CF_CLIENT_SECRET
   };
 
-  const res = await fetch("/.netlify/functions/createPayment", {
+  const res = await fetch("/.netlify/functions/createPayment.js", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
