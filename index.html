@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AkshitBot VPS Hosting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>AkshitBot VPS Hosting</h1>
+    <p>Fast · Reliable · Indian IP</p>
+  </header>
+
+  <section class="plans">
+    <h2>Our VPS Plans</h2>
+    <div class="plan-list">
+      <div class="plan"><h3>Basic</h3><p>2 Core | 2GB RAM | 50GB SSD</p><strong>₹400/month</strong><button onclick="order('Basic', 400)">Order Now</button></div>
+      <div class="plan"><h3>Standard</h3><p>2 Core | 4GB RAM | 50GB SSD</p><strong>₹550/month</strong><button onclick="order('Standard', 550)">Order Now</button></div>
+      <div class="plan"><h3>Pro</h3><p>4 Core | 8GB RAM | 50GB SSD</p><strong>₹700/month</strong><button onclick="order('Pro', 700)">Order Now</button></div>
+      <div class="plan"><h3>Ultra</h3><p>4 Core | 12GB RAM | 80GB SSD</p><strong>₹900/month</strong><button onclick="order('Ultra', 900)">Order Now</button></div>
+      <div class="plan"><h3>Max</h3><p>4 Core | 16GB RAM | 80GB SSD</p><strong>₹1100/month</strong><button onclick="order('Max', 1100)">Order Now</button></div>
+    </div>
+  </section>
+
+  <section id="payment-section" class="hidden">
+    <h2>Order Summary</h2>
+    <p id="summary-text"></p>
+    <form id="payment-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="hidden" name="plan" id="selected-plan" />
+      <input type="hidden" name="amount" id="selected-amount" />
+      <button type="submit">Pay with Cashfree</button>
+    </form>
+  </section>
+
+  <footer><p>Contact: @AkshitBot | No Refunds | Full Warranty</p></footer>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
