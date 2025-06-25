@@ -25,23 +25,11 @@ document.getElementById('payment-form').addEventListener('submit', async functio
     'x-client-secret': CF_CLIENT_SECRET
   };
 
-  try {
-    const res = await fetch(paymentUrl, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        order_amount: data.amount,
-        order_currency: 'INR',
-        customer_details: {
-          customer_id: data.email,
-          customer_email: data.email,
-          customer_phone: data.phone
-        },
-        order_meta: {
-          return_url: 'https://yourdomain.com/thankyou.html'
-        }
-      })
-    });
+  const res = await fetch("/.netlify/functions/createPayment", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
 
     const result = await res.json();
     if (result.payment_link) {
